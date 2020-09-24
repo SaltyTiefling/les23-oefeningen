@@ -23,14 +23,14 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-            randomLable(new Random(), lbl1, lbl2);
+            randomizeLables(new Random(), lbl1, lbl2);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            randomLable(new Random(), lbl1, lbl2);
+            randomizeLables(new Random(), lbl1, lbl2);
         }
-        private void randomLable(Random randomizer,params Label[] labels)
+        private void randomizeLables(Random randomizer,params Label[] labels)
         {
             foreach (Label label in labels)
             {
