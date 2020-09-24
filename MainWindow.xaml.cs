@@ -23,6 +23,20 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+            randomLable(new Random(), lbl1, lbl2);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            randomLable(new Random(), lbl1, lbl2);
+        }
+        private void randomLable(Random randomizer,params Label[] labels)
+        {
+            foreach (Label label in labels)
+            {
+                label.Background = new SolidColorBrush(Color.FromArgb(255, (byte)randomizer.Next(256), (byte)randomizer.Next(256), (byte)randomizer.Next(256)));
+                label.Content = randomizer.Next();
+            }
         }
     }
 }
